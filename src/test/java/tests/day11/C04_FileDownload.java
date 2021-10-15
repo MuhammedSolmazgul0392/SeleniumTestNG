@@ -25,3 +25,4 @@ class C04_FileDownLoad extends TestBase {
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
     }
 }
+
