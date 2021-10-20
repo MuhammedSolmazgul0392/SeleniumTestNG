@@ -59,6 +59,10 @@ public class C01_ExplicitlyWait extends TestBase {
          WebElement sonucYazisi= driver.findElement(By.xpath("//p[@id='message']"));
          wait.until(ExpectedConditions.visibilityOf(sonucYazisi));
          Assert.assertTrue(sonucYazisi.isDisplayed());
+         //6. Add buttonuna basin
+         driver.findElement(By.xpath("//button[@onclick='swapCheckbox()']")).click();
+     //7. It's back mesajinin gorundugunu test edin
+         WebElement itsBack=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@id='message']")));
 
 
      }
